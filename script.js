@@ -36,7 +36,7 @@ Promise.all(promises)
 
         times.forEach((time, index) => {
             totalTime += time;
-            addRow(`Promise ${index + 1}`, Math.floor(time.toFixed(3)}));
+            addRow(`Promise ${index + 1}`, `${time.toFixed(3)} seconds`);
         });
 
         addRow('Total', `${totalTime.toFixed(3)} seconds`);
