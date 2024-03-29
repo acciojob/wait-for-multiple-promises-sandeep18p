@@ -39,8 +39,8 @@ Promise.all(promises)
             addRow(`Promise ${index + 1}`, `${time.toFixed(3)} seconds`);
         });
 
-        addRow('Total', `${totalTime.toFixed(3)} seconds`);
+        addRow('Total', `${totalTime.toFixed(3)} `);
     })
-    .catch((error) => {
+    .catch((error) => { 
         console.error("Error:", error);
     });
