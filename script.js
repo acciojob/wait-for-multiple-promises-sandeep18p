@@ -2,6 +2,7 @@ const ele = document.getElementById('output');
 
 function addRow(one = 'Loading...', two = 'Loading...') {
     const row = document.createElement("tr");
+	row.setAttribute("id", "loading");
     const cell1 = document.createElement("td");
     const cell2 = document.createElement("td");
     cell1.textContent = one;
