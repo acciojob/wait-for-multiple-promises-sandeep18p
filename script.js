@@ -1,12 +1,12 @@
 const ele = document.getElementById('output');
 
-function addRow(one = 'Loading...', two = 'Loading...') {
+function addRow(one = 'Loading...', ) {
     const row = document.createElement("tr");
 	row.setAttribute("id", "loading");
     const cell1 = document.createElement("td");
     const cell2 = document.createElement("td");
     cell1.textContent = one;
-    cell2.textContent = two;
+    // cell2.textContent = two;
     row.appendChild(cell1);
     row.appendChild(cell2);
     ele.appendChild(row);
