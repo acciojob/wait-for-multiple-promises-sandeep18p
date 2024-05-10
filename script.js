@@ -1,12 +1,12 @@
 const ele = document.getElementById('output');
 
-function addRow(one = 'Loading...', ) {
+function addRow(one = 'Loading...', two = '') { // Modified function to take two arguments
     const row = document.createElement("tr");
-	row.setAttribute("id", "loading");
+    row.setAttribute("id", "loading");
     const cell1 = document.createElement("td");
     const cell2 = document.createElement("td");
     cell1.textContent = one;
-    // cell2.textContent = two;
+    cell2.textContent = two; // Uncommented this line to add the second argument to cell2
     row.appendChild(cell1);
     row.appendChild(cell2);
     ele.appendChild(row);
@@ -40,7 +40,7 @@ Promise.all(promises)
             addRow(`Promise ${index + 1}`, `${time.toFixed(3)} seconds`);
         });
 
-        addRow('Total', `${totalTime.toFixed(3)} `);
+        addRow('Total', `${totalTime.toFixed(3)} seconds`); // Added "seconds" to the end
     })
     .catch((error) => { 
         console.error("Error:", error);
